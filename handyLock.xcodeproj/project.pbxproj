@@ -1,0 +1,632 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A1214C5919DDA24A00A0D02B /* PollFrequencyNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = A1214C5819DDA24A00A0D02B /* PollFrequencyNumber.m */; };
+		A12DDF7219D38A0E0078B3B3 /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A12DDF7119D38A0E0078B3B3 /* ScreenSaver.framework */; };
+		A12E648C17DC2ED900FE6398 /* handyLockHelper.app in Resources */ = {isa = PBXBuildFile; fileRef = A1F49B7617DC25EB0016B954 /* handyLockHelper.app */; };
+		A1395F4D19D88B9500D644CB /* lockicon.png in Resources */ = {isa = PBXBuildFile; fileRef = A1395F4C19D88B9500D644CB /* lockicon.png */; };
+		A1395F4E19D88C5400D644CB /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = A1DAE65217DBE0E700C77B56 /* AppIcon.icns */; };
+		A144DD911A26BFA50020D61D /* IdleTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DAE66F17DBE51D00C77B56 /* IdleTimer.m */; };
+		A161ABC717DBD4B0000C8B35 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A161ABC617DBD4B0000C8B35 /* Cocoa.framework */; };
+		A161ABD317DBD4B0000C8B35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A161ABD217DBD4B0000C8B35 /* main.m */; };
+		A161ABDA17DBD4B0000C8B35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A161ABD917DBD4B0000C8B35 /* AppDelegate.m */; };
+		A18218E01A6C5EB600038DE3 /* lockscreenValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = A18218DF1A6C5EB600038DE3 /* lockscreenValueTransformer.m */; };
+		A1BF886919D89A7600B6AB29 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1BF886719D89A7600B6AB29 /* MainMenu.xib */; };
+		A1BF886C19D89AAD00B6AB29 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1BF886A19D89AAD00B6AB29 /* MainMenu.xib */; };
+		A1C767581A6ACD3C00740487 /* Porte.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1AE05A51A34DFFD005ECDC6 /* Porte.mp3 */; };
+		A1DAE64E17DBE0C600C77B56 /* off.png in Resources */ = {isa = PBXBuildFile; fileRef = A1DAE64C17DBE0C600C77B56 /* off.png */; };
+		A1DAE64F17DBE0C600C77B56 /* on.png in Resources */ = {isa = PBXBuildFile; fileRef = A1DAE64D17DBE0C600C77B56 /* on.png */; };
+		A1DAE65117DBE0DB00C77B56 /* lock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A1DAE65017DBE0DB00C77B56 /* lock@2x.png */; };
+		A1DAE65317DBE0E700C77B56 /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = A1DAE65217DBE0E700C77B56 /* AppIcon.icns */; };
+		A1DAE65D17DBE12300C77B56 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DAE65B17DBE12300C77B56 /* Base64.m */; };
+		A1DAE66017DBE13100C77B56 /* VDKQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DAE65F17DBE13100C77B56 /* VDKQueue.m */; };
+		A1DAE66317DBE1E900C77B56 /* IOBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1DAE66117DBE1E900C77B56 /* IOBluetooth.framework */; };
+		A1DAE66417DBE1E900C77B56 /* IOBluetoothUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1DAE66217DBE1E900C77B56 /* IOBluetoothUI.framework */; };
+		A1DAE66617DBE1F500C77B56 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1DAE66517DBE1F500C77B56 /* SystemConfiguration.framework */; };
+		A1DAE66817DBE20000C77B56 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1DAE66717DBE20000C77B56 /* IOKit.framework */; };
+		A1DAE66A17DBE29200C77B56 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1DAE66917DBE29200C77B56 /* Security.framework */; };
+		A1DAE66C17DBE3A100C77B56 /* NumberField.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DAE66B17DBE3A100C77B56 /* NumberField.m */; };
+		A1DAE67017DBE51D00C77B56 /* IdleTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DAE66F17DBE51D00C77B56 /* IdleTimer.m */; };
+		A1DAE67217DBE8FE00C77B56 /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = A1DAE67117DBE8FE00C77B56 /* lock.png */; };
+		A1EC7CB319D22DB200D5F928 /* defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1EC7CB219D22DB200D5F928 /* defaults.plist */; };
+		A1F49B7717DC25EB0016B954 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A161ABC617DBD4B0000C8B35 /* Cocoa.framework */; };
+		A1F49B7F17DC25EB0016B954 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F49B7E17DC25EB0016B954 /* main.m */; };
+		A1F49B8617DC25EB0016B954 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F49B8517DC25EB0016B954 /* AppDelegate.m */; };
+		A1F49B8B17DC25EB0016B954 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1F49B8A17DC25EB0016B954 /* Images.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A12E648A17DC2EC200FE6398 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A161ABBB17DBD4B0000C8B35 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A1F49B7517DC25EB0016B954;
+			remoteInfo = handyLockHelper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A10602CB1A086EA40025C838 /* handyLock.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = handyLock.entitlements; sourceTree = "<group>"; };
+		A10602CC1A086ECE0025C838 /* handyLockHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = handyLockHelper.entitlements; sourceTree = "<group>"; };
+		A1214C5719DDA24A00A0D02B /* PollFrequencyNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PollFrequencyNumber.h; sourceTree = "<group>"; };
+		A1214C5819DDA24A00A0D02B /* PollFrequencyNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PollFrequencyNumber.m; sourceTree = "<group>"; };
+		A12DDF7119D38A0E0078B3B3 /* ScreenSaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenSaver.framework; path = System/Library/Frameworks/ScreenSaver.framework; sourceTree = SDKROOT; };
+		A1395F4C19D88B9500D644CB /* lockicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lockicon.png; sourceTree = "<group>"; };
+		A161ABC317DBD4B0000C8B35 /* handyLock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = handyLock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A161ABC617DBD4B0000C8B35 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		A161ABC917DBD4B0000C8B35 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		A161ABCA17DBD4B0000C8B35 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A161ABCB17DBD4B0000C8B35 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A161ABCE17DBD4B0000C8B35 /* handyLock-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "handyLock-Info.plist"; sourceTree = "<group>"; };
+		A161ABD217DBD4B0000C8B35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A161ABD417DBD4B0000C8B35 /* handyLock-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "handyLock-Prefix.pch"; sourceTree = "<group>"; };
+		A161ABD817DBD4B0000C8B35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A161ABD917DBD4B0000C8B35 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A161ABE317DBD4E8000C8B35 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		A18218DE1A6C5EB600038DE3 /* lockscreenValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lockscreenValueTransformer.h; sourceTree = "<group>"; };
+		A18218DF1A6C5EB600038DE3 /* lockscreenValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lockscreenValueTransformer.m; sourceTree = "<group>"; };
+		A1877F5A19BFB9E3002710E2 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		A1AE05A51A34DFFD005ECDC6 /* Porte.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Porte.mp3; path = handyLockHelper/Porte.mp3; sourceTree = SOURCE_ROOT; };
+		A1BF886819D89A7600B6AB29 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		A1BF886B19D89AAD00B6AB29 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		A1DAE64C17DBE0C600C77B56 /* off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = off.png; sourceTree = "<group>"; };
+		A1DAE64D17DBE0C600C77B56 /* on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = on.png; sourceTree = "<group>"; };
+		A1DAE65017DBE0DB00C77B56 /* lock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lock@2x.png"; sourceTree = "<group>"; };
+		A1DAE65217DBE0E700C77B56 /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = "<group>"; };
+		A1DAE65A17DBE12300C77B56 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
+		A1DAE65B17DBE12300C77B56 /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
+		A1DAE65C17DBE12300C77B56 /* DebugOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugOutput.h; sourceTree = "<group>"; };
+		A1DAE65E17DBE13100C77B56 /* VDKQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDKQueue.h; sourceTree = "<group>"; };
+		A1DAE65F17DBE13100C77B56 /* VDKQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDKQueue.m; sourceTree = "<group>"; };
+		A1DAE66117DBE1E900C77B56 /* IOBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOBluetooth.framework; path = System/Library/Frameworks/IOBluetooth.framework; sourceTree = SDKROOT; };
+		A1DAE66217DBE1E900C77B56 /* IOBluetoothUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOBluetoothUI.framework; path = System/Library/Frameworks/IOBluetoothUI.framework; sourceTree = SDKROOT; };
+		A1DAE66517DBE1F500C77B56 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A1DAE66717DBE20000C77B56 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		A1DAE66917DBE29200C77B56 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A1DAE66B17DBE3A100C77B56 /* NumberField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberField.m; sourceTree = "<group>"; };
+		A1DAE66D17DBE3DE00C77B56 /* NumberField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NumberField.h; sourceTree = "<group>"; };
+		A1DAE66E17DBE51D00C77B56 /* IdleTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdleTimer.h; sourceTree = "<group>"; };
+		A1DAE66F17DBE51D00C77B56 /* IdleTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdleTimer.m; sourceTree = "<group>"; };
+		A1DAE67117DBE8FE00C77B56 /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock.png; sourceTree = "<group>"; };
+		A1EC7CB219D22DB200D5F928 /* defaults.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = defaults.plist; sourceTree = "<group>"; };
+		A1F49B7617DC25EB0016B954 /* handyLockHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = handyLockHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1F49B7A17DC25EB0016B954 /* handyLockHelper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "handyLockHelper-Info.plist"; sourceTree = "<group>"; };
+		A1F49B7E17DC25EB0016B954 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A1F49B8017DC25EB0016B954 /* handyLockHelper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "handyLockHelper-Prefix.pch"; sourceTree = "<group>"; };
+		A1F49B8417DC25EB0016B954 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A1F49B8517DC25EB0016B954 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A1F49B8A17DC25EB0016B954 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A1F49B9117DC25EB0016B954 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A1F49B9817DC25EB0016B954 /* handyLockHelperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "handyLockHelperTests-Info.plist"; sourceTree = "<group>"; };
+		A1F49B9C17DC25EB0016B954 /* handyLockHelperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = handyLockHelperTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A161ABC017DBD4B0000C8B35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A12DDF7219D38A0E0078B3B3 /* ScreenSaver.framework in Frameworks */,
+				A1DAE66A17DBE29200C77B56 /* Security.framework in Frameworks */,
+				A1DAE66817DBE20000C77B56 /* IOKit.framework in Frameworks */,
+				A1DAE66617DBE1F500C77B56 /* SystemConfiguration.framework in Frameworks */,
+				A1DAE66317DBE1E900C77B56 /* IOBluetooth.framework in Frameworks */,
+				A1DAE66417DBE1E900C77B56 /* IOBluetoothUI.framework in Frameworks */,
+				A161ABC717DBD4B0000C8B35 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1F49B7317DC25EB0016B954 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1F49B7717DC25EB0016B954 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A144DD921A26BFD10020D61D /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				A1DAE66E17DBE51D00C77B56 /* IdleTimer.h */,
+				A1DAE66F17DBE51D00C77B56 /* IdleTimer.m */,
+				A1DAE65C17DBE12300C77B56 /* DebugOutput.h */,
+			);
+			name = Shared;
+			path = handyLock;
+			sourceTree = "<group>";
+		};
+		A161ABBA17DBD4B0000C8B35 = {
+			isa = PBXGroup;
+			children = (
+				A161ABE317DBD4E8000C8B35 /* WebKit.framework */,
+				A144DD921A26BFD10020D61D /* Shared */,
+				A161ABCC17DBD4B0000C8B35 /* handyLock */,
+				A1F49B7817DC25EB0016B954 /* handyLockHelper */,
+				A1F49B9617DC25EB0016B954 /* handyLockHelperTests */,
+				A161ABC517DBD4B0000C8B35 /* Frameworks */,
+				A161ABC417DBD4B0000C8B35 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A161ABC417DBD4B0000C8B35 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A161ABC317DBD4B0000C8B35 /* handyLock.app */,
+				A1F49B7617DC25EB0016B954 /* handyLockHelper.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A161ABC517DBD4B0000C8B35 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A12DDF7119D38A0E0078B3B3 /* ScreenSaver.framework */,
+				A1877F5A19BFB9E3002710E2 /* CoreBluetooth.framework */,
+				A1DAE66917DBE29200C77B56 /* Security.framework */,
+				A1DAE66717DBE20000C77B56 /* IOKit.framework */,
+				A1DAE66517DBE1F500C77B56 /* SystemConfiguration.framework */,
+				A1DAE66117DBE1E900C77B56 /* IOBluetooth.framework */,
+				A1DAE66217DBE1E900C77B56 /* IOBluetoothUI.framework */,
+				A161ABC617DBD4B0000C8B35 /* Cocoa.framework */,
+				A1F49B9117DC25EB0016B954 /* XCTest.framework */,
+				A161ABC817DBD4B0000C8B35 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A161ABC817DBD4B0000C8B35 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A161ABC917DBD4B0000C8B35 /* AppKit.framework */,
+				A161ABCA17DBD4B0000C8B35 /* CoreData.framework */,
+				A161ABCB17DBD4B0000C8B35 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		A161ABCC17DBD4B0000C8B35 /* handyLock */ = {
+			isa = PBXGroup;
+			children = (
+				A10602CB1A086EA40025C838 /* handyLock.entitlements */,
+				A161ABD817DBD4B0000C8B35 /* AppDelegate.h */,
+				A161ABD917DBD4B0000C8B35 /* AppDelegate.m */,
+				A1BF886A19D89AAD00B6AB29 /* MainMenu.xib */,
+				A18218DE1A6C5EB600038DE3 /* lockscreenValueTransformer.h */,
+				A18218DF1A6C5EB600038DE3 /* lockscreenValueTransformer.m */,
+				A1DAE65A17DBE12300C77B56 /* Base64.h */,
+				A1DAE65B17DBE12300C77B56 /* Base64.m */,
+				A1DAE65E17DBE13100C77B56 /* VDKQueue.h */,
+				A1DAE65F17DBE13100C77B56 /* VDKQueue.m */,
+				A1214C5719DDA24A00A0D02B /* PollFrequencyNumber.h */,
+				A1214C5819DDA24A00A0D02B /* PollFrequencyNumber.m */,
+				A1DAE66D17DBE3DE00C77B56 /* NumberField.h */,
+				A1DAE66B17DBE3A100C77B56 /* NumberField.m */,
+				A161ABCD17DBD4B0000C8B35 /* Supporting Files */,
+			);
+			path = handyLock;
+			sourceTree = "<group>";
+		};
+		A161ABCD17DBD4B0000C8B35 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A161ABCE17DBD4B0000C8B35 /* handyLock-Info.plist */,
+				A1EC7CB219D22DB200D5F928 /* defaults.plist */,
+				A161ABD217DBD4B0000C8B35 /* main.m */,
+				A161ABD417DBD4B0000C8B35 /* handyLock-Prefix.pch */,
+				A1DAE67117DBE8FE00C77B56 /* lock.png */,
+				A1DAE64C17DBE0C600C77B56 /* off.png */,
+				A1DAE64D17DBE0C600C77B56 /* on.png */,
+				A1DAE65017DBE0DB00C77B56 /* lock@2x.png */,
+				A1DAE65217DBE0E700C77B56 /* AppIcon.icns */,
+				A1AE05A51A34DFFD005ECDC6 /* Porte.mp3 */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A1F49B7817DC25EB0016B954 /* handyLockHelper */ = {
+			isa = PBXGroup;
+			children = (
+				A10602CC1A086ECE0025C838 /* handyLockHelper.entitlements */,
+				A1F49B8417DC25EB0016B954 /* AppDelegate.h */,
+				A1F49B8517DC25EB0016B954 /* AppDelegate.m */,
+				A1BF886719D89A7600B6AB29 /* MainMenu.xib */,
+				A1F49B8A17DC25EB0016B954 /* Images.xcassets */,
+				A1F49B7917DC25EB0016B954 /* Supporting Files */,
+			);
+			path = handyLockHelper;
+			sourceTree = "<group>";
+		};
+		A1F49B7917DC25EB0016B954 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A1F49B7A17DC25EB0016B954 /* handyLockHelper-Info.plist */,
+				A1395F4C19D88B9500D644CB /* lockicon.png */,
+				A1F49B7E17DC25EB0016B954 /* main.m */,
+				A1F49B8017DC25EB0016B954 /* handyLockHelper-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A1F49B9617DC25EB0016B954 /* handyLockHelperTests */ = {
+			isa = PBXGroup;
+			children = (
+				A1F49B9C17DC25EB0016B954 /* handyLockHelperTests.m */,
+				A1F49B9717DC25EB0016B954 /* Supporting Files */,
+			);
+			path = handyLockHelperTests;
+			sourceTree = "<group>";
+		};
+		A1F49B9717DC25EB0016B954 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A1F49B9817DC25EB0016B954 /* handyLockHelperTests-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A161ABC217DBD4B0000C8B35 /* handyLock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A161ABE017DBD4B0000C8B35 /* Build configuration list for PBXNativeTarget "handyLock" */;
+			buildPhases = (
+				A161ABBF17DBD4B0000C8B35 /* Sources */,
+				A161ABC017DBD4B0000C8B35 /* Frameworks */,
+				A161ABC117DBD4B0000C8B35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A12E648B17DC2EC200FE6398 /* PBXTargetDependency */,
+			);
+			name = handyLock;
+			productName = handyLock;
+			productReference = A161ABC317DBD4B0000C8B35 /* handyLock.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A1F49B7517DC25EB0016B954 /* handyLockHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1F49B9E17DC25EB0016B954 /* Build configuration list for PBXNativeTarget "handyLockHelper" */;
+			buildPhases = (
+				A1F49B7217DC25EB0016B954 /* Sources */,
+				A1F49B7317DC25EB0016B954 /* Frameworks */,
+				A1F49B7417DC25EB0016B954 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = handyLockHelper;
+			productName = handyLockHelper;
+			productReference = A1F49B7617DC25EB0016B954 /* handyLockHelper.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A161ABBB17DBD4B0000C8B35 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Netputing Systems Inc.";
+				TargetAttributes = {
+					A161ABC217DBD4B0000C8B35 = {
+						DevelopmentTeam = 6JK9WE675V;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
+					};
+					A1F49B7517DC25EB0016B954 = {
+						DevelopmentTeam = 6JK9WE675V;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = A161ABBE17DBD4B0000C8B35 /* Build configuration list for PBXProject "handyLock" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A161ABBA17DBD4B0000C8B35;
+			productRefGroup = A161ABC417DBD4B0000C8B35 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A161ABC217DBD4B0000C8B35 /* handyLock */,
+				A1F49B7517DC25EB0016B954 /* handyLockHelper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A161ABC117DBD4B0000C8B35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A12E648C17DC2ED900FE6398 /* handyLockHelper.app in Resources */,
+				A1DAE64F17DBE0C600C77B56 /* on.png in Resources */,
+				A1DAE65117DBE0DB00C77B56 /* lock@2x.png in Resources */,
+				A1C767581A6ACD3C00740487 /* Porte.mp3 in Resources */,
+				A1DAE65317DBE0E700C77B56 /* AppIcon.icns in Resources */,
+				A1DAE67217DBE8FE00C77B56 /* lock.png in Resources */,
+				A1DAE64E17DBE0C600C77B56 /* off.png in Resources */,
+				A1EC7CB319D22DB200D5F928 /* defaults.plist in Resources */,
+				A1BF886C19D89AAD00B6AB29 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1F49B7417DC25EB0016B954 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1395F4D19D88B9500D644CB /* lockicon.png in Resources */,
+				A1F49B8B17DC25EB0016B954 /* Images.xcassets in Resources */,
+				A1395F4E19D88C5400D644CB /* AppIcon.icns in Resources */,
+				A1BF886919D89A7600B6AB29 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A161ABBF17DBD4B0000C8B35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A18218E01A6C5EB600038DE3 /* lockscreenValueTransformer.m in Sources */,
+				A161ABD317DBD4B0000C8B35 /* main.m in Sources */,
+				A1DAE65D17DBE12300C77B56 /* Base64.m in Sources */,
+				A1214C5919DDA24A00A0D02B /* PollFrequencyNumber.m in Sources */,
+				A161ABDA17DBD4B0000C8B35 /* AppDelegate.m in Sources */,
+				A1DAE67017DBE51D00C77B56 /* IdleTimer.m in Sources */,
+				A1DAE66017DBE13100C77B56 /* VDKQueue.m in Sources */,
+				A1DAE66C17DBE3A100C77B56 /* NumberField.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1F49B7217DC25EB0016B954 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A144DD911A26BFA50020D61D /* IdleTimer.m in Sources */,
+				A1F49B8617DC25EB0016B954 /* AppDelegate.m in Sources */,
+				A1F49B7F17DC25EB0016B954 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A12E648B17DC2EC200FE6398 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A1F49B7517DC25EB0016B954 /* handyLockHelper */;
+			targetProxy = A12E648A17DC2EC200FE6398 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A1BF886719D89A7600B6AB29 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1BF886819D89A7600B6AB29 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		A1BF886A19D89AAD00B6AB29 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1BF886B19D89AAD00B6AB29 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A161ABDE17DBD4B0000C8B35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A161ABDF17DBD4B0000C8B35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A161ABE117DBD4B0000C8B35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu89;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "handyLock/handyLock-Prefix.pch";
+				INFOPLIST_FILE = "handyLock/handyLock-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.netputing.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				STRIP_INSTALLED_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A161ABE217DBD4B0000C8B35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu89;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "handyLock/handyLock-Prefix.pch";
+				INFOPLIST_FILE = "handyLock/handyLock-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.netputing.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				STRIP_INSTALLED_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A1F49B9F17DC25EB0016B954 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "handyLockHelper/handyLockHelper-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "handyLockHelper/handyLockHelper-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.netputing.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A1F49BA017DC25EB0016B954 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "handyLockHelper/handyLockHelper-Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "handyLockHelper/handyLockHelper-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.netputing.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A161ABBE17DBD4B0000C8B35 /* Build configuration list for PBXProject "handyLock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A161ABDE17DBD4B0000C8B35 /* Debug */,
+				A161ABDF17DBD4B0000C8B35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A161ABE017DBD4B0000C8B35 /* Build configuration list for PBXNativeTarget "handyLock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A161ABE117DBD4B0000C8B35 /* Debug */,
+				A161ABE217DBD4B0000C8B35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1F49B9E17DC25EB0016B954 /* Build configuration list for PBXNativeTarget "handyLockHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1F49B9F17DC25EB0016B954 /* Debug */,
+				A1F49BA017DC25EB0016B954 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A161ABBB17DBD4B0000C8B35 /* Project object */;
+}

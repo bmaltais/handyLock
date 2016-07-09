@@ -1,0 +1,1725 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8164.2" systemVersion="15A226f" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8164.2"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="494" id="495"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <menu title="AMainMenu" systemMenu="main" id="29">
+            <items>
+                <menuItem title="handyLock" id="56">
+                    <menu key="submenu" title="handyLock" systemMenu="apple" id="57">
+                        <items>
+                            <menuItem title="About handyLock" id="58">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="orderFrontStandardAboutPanel:" target="-2" id="142"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="236">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Preferences…" keyEquivalent="," id="129"/>
+                            <menuItem isSeparatorItem="YES" id="143">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Services" id="131">
+                                <menu key="submenu" title="Services" systemMenu="services" id="130"/>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="144">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Hide handyLock" keyEquivalent="h" id="134">
+                                <connections>
+                                    <action selector="hide:" target="-1" id="367"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Hide Others" keyEquivalent="h" id="145">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="hideOtherApplications:" target="-1" id="368"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Show All" id="150">
+                                <connections>
+                                    <action selector="unhideAllApplications:" target="-1" id="370"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="149">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Quit handyLock" id="136">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="terminate:" target="-3" id="449"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="File" id="83">
+                    <menu key="submenu" title="File" id="81">
+                        <items>
+                            <menuItem title="New" keyEquivalent="n" id="82">
+                                <connections>
+                                    <action selector="newDocument:" target="-1" id="373"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Open…" keyEquivalent="o" id="72">
+                                <connections>
+                                    <action selector="openDocument:" target="-1" id="374"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Open Recent" id="124">
+                                <menu key="submenu" title="Open Recent" systemMenu="recentDocuments" id="125">
+                                    <items>
+                                        <menuItem title="Clear Menu" id="126">
+                                            <connections>
+                                                <action selector="clearRecentDocuments:" target="-1" id="127"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="79">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Close" keyEquivalent="w" id="73">
+                                <connections>
+                                    <action selector="performClose:" target="-1" id="193"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Save…" keyEquivalent="s" id="75">
+                                <connections>
+                                    <action selector="saveDocument:" target="-1" id="362"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Revert to Saved" id="112">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="revertDocumentToSaved:" target="-1" id="364"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="74">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Page Setup..." keyEquivalent="P" id="77">
+                                <modifierMask key="keyEquivalentModifierMask" shift="YES" command="YES"/>
+                                <connections>
+                                    <action selector="runPageLayout:" target="-1" id="87"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Print…" keyEquivalent="p" id="78">
+                                <connections>
+                                    <action selector="print:" target="-1" id="86"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Edit" id="217">
+                    <menu key="submenu" title="Edit" id="205">
+                        <items>
+                            <menuItem title="Undo" keyEquivalent="z" id="207">
+                                <connections>
+                                    <action selector="undo:" target="-1" id="223"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Redo" keyEquivalent="Z" id="215">
+                                <modifierMask key="keyEquivalentModifierMask" shift="YES" command="YES"/>
+                                <connections>
+                                    <action selector="redo:" target="-1" id="231"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="206">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Cut" keyEquivalent="x" id="199">
+                                <connections>
+                                    <action selector="cut:" target="-1" id="228"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Copy" keyEquivalent="c" id="197">
+                                <connections>
+                                    <action selector="copy:" target="-1" id="224"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Paste" keyEquivalent="v" id="203">
+                                <connections>
+                                    <action selector="paste:" target="-1" id="226"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Paste and Match Style" keyEquivalent="V" id="485">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="pasteAsPlainText:" target="-1" id="486"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Delete" id="202">
+                                <connections>
+                                    <action selector="delete:" target="-1" id="235"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Select All" keyEquivalent="a" id="198">
+                                <connections>
+                                    <action selector="selectAll:" target="-1" id="232"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="214">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Find" id="218">
+                                <menu key="submenu" title="Find" id="220">
+                                    <items>
+                                        <menuItem title="Find…" tag="1" keyEquivalent="f" id="209">
+                                            <connections>
+                                                <action selector="performFindPanelAction:" target="-1" id="241"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Find and Replace…" tag="12" keyEquivalent="f" id="534">
+                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="performFindPanelAction:" target="-1" id="535"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Find Next" tag="2" keyEquivalent="g" id="208">
+                                            <connections>
+                                                <action selector="performFindPanelAction:" target="-1" id="487"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Find Previous" tag="3" keyEquivalent="G" id="213">
+                                            <modifierMask key="keyEquivalentModifierMask" shift="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="performFindPanelAction:" target="-1" id="488"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Use Selection for Find" tag="7" keyEquivalent="e" id="221">
+                                            <connections>
+                                                <action selector="performFindPanelAction:" target="-1" id="489"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Jump to Selection" keyEquivalent="j" id="210">
+                                            <connections>
+                                                <action selector="centerSelectionInVisibleArea:" target="-1" id="245"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Spelling and Grammar" id="216">
+                                <menu key="submenu" title="Spelling and Grammar" id="200">
+                                    <items>
+                                        <menuItem title="Show Spelling and Grammar" keyEquivalent=":" id="204">
+                                            <connections>
+                                                <action selector="showGuessPanel:" target="-1" id="230"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Check Document Now" keyEquivalent=";" id="201">
+                                            <connections>
+                                                <action selector="checkSpelling:" target="-1" id="225"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="453"/>
+                                        <menuItem title="Check Spelling While Typing" id="219">
+                                            <connections>
+                                                <action selector="toggleContinuousSpellChecking:" target="-1" id="222"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Check Grammar With Spelling" id="346">
+                                            <connections>
+                                                <action selector="toggleGrammarChecking:" target="-1" id="347"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Correct Spelling Automatically" id="454">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="toggleAutomaticSpellingCorrection:" target="-1" id="456"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Substitutions" id="348">
+                                <menu key="submenu" title="Substitutions" id="349">
+                                    <items>
+                                        <menuItem title="Show Substitutions" id="457">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="orderFrontSubstitutionsPanel:" target="-1" id="458"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="459"/>
+                                        <menuItem title="Smart Copy/Paste" tag="1" keyEquivalent="f" id="350">
+                                            <connections>
+                                                <action selector="toggleSmartInsertDelete:" target="-1" id="355"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Smart Quotes" tag="2" keyEquivalent="g" id="351">
+                                            <connections>
+                                                <action selector="toggleAutomaticQuoteSubstitution:" target="-1" id="356"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Smart Dashes" id="460">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="toggleAutomaticDashSubstitution:" target="-1" id="461"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Smart Links" tag="3" keyEquivalent="G" id="354">
+                                            <modifierMask key="keyEquivalentModifierMask" shift="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="toggleAutomaticLinkDetection:" target="-1" id="357"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Text Replacement" id="462">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="toggleAutomaticTextReplacement:" target="-1" id="463"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Transformations" id="450">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Transformations" id="451">
+                                    <items>
+                                        <menuItem title="Make Upper Case" id="452">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="uppercaseWord:" target="-1" id="464"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Make Lower Case" id="465">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="lowercaseWord:" target="-1" id="468"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Capitalize" id="466">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="capitalizeWord:" target="-1" id="467"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Speech" id="211">
+                                <menu key="submenu" title="Speech" id="212">
+                                    <items>
+                                        <menuItem title="Start Speaking" id="196">
+                                            <connections>
+                                                <action selector="startSpeaking:" target="-1" id="233"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Stop Speaking" id="195">
+                                            <connections>
+                                                <action selector="stopSpeaking:" target="-1" id="227"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Format" id="375">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Format" id="376">
+                        <items>
+                            <menuItem title="Font" id="377">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Font" systemMenu="font" id="388">
+                                    <items>
+                                        <menuItem title="Show Fonts" keyEquivalent="t" id="389">
+                                            <connections>
+                                                <action selector="orderFrontFontPanel:" target="420" id="424"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Bold" tag="2" keyEquivalent="b" id="390">
+                                            <connections>
+                                                <action selector="addFontTrait:" target="420" id="421"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Italic" tag="1" keyEquivalent="i" id="391">
+                                            <connections>
+                                                <action selector="addFontTrait:" target="420" id="422"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Underline" keyEquivalent="u" id="392">
+                                            <connections>
+                                                <action selector="underline:" target="-1" id="432"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="393"/>
+                                        <menuItem title="Bigger" tag="3" keyEquivalent="+" id="394">
+                                            <connections>
+                                                <action selector="modifyFont:" target="420" id="425"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Smaller" tag="4" keyEquivalent="-" id="395">
+                                            <connections>
+                                                <action selector="modifyFont:" target="420" id="423"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="396"/>
+                                        <menuItem title="Kern" id="397">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <menu key="submenu" title="Kern" id="415">
+                                                <items>
+                                                    <menuItem title="Use Default" id="416">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="useStandardKerning:" target="-1" id="438"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="Use None" id="417">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="turnOffKerning:" target="-1" id="441"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="Tighten" id="418">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="tightenKerning:" target="-1" id="431"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="Loosen" id="419">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="loosenKerning:" target="-1" id="435"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                </items>
+                                            </menu>
+                                        </menuItem>
+                                        <menuItem title="Ligatures" id="398">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <menu key="submenu" title="Ligatures" id="411">
+                                                <items>
+                                                    <menuItem title="Use Default" id="412">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="useStandardLigatures:" target="-1" id="439"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="Use None" id="413">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="turnOffLigatures:" target="-1" id="440"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="Use All" id="414">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="useAllLigatures:" target="-1" id="434"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                </items>
+                                            </menu>
+                                        </menuItem>
+                                        <menuItem title="Baseline" id="399">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <menu key="submenu" title="Baseline" id="405">
+                                                <items>
+                                                    <menuItem title="Use Default" id="406">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="unscript:" target="-1" id="437"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="Superscript" id="407">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="superscript:" target="-1" id="430"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="Subscript" id="408">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="subscript:" target="-1" id="429"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="Raise" id="409">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="raiseBaseline:" target="-1" id="426"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="Lower" id="410">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="lowerBaseline:" target="-1" id="427"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                </items>
+                                            </menu>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="400"/>
+                                        <menuItem title="Show Colors" keyEquivalent="C" id="401">
+                                            <connections>
+                                                <action selector="orderFrontColorPanel:" target="-1" id="433"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="402"/>
+                                        <menuItem title="Copy Style" keyEquivalent="c" id="403">
+                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="copyFont:" target="-1" id="428"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Paste Style" keyEquivalent="v" id="404">
+                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="pasteFont:" target="-1" id="436"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Text" id="496">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Text" id="497">
+                                    <items>
+                                        <menuItem title="Align Left" keyEquivalent="{" id="498">
+                                            <connections>
+                                                <action selector="alignLeft:" target="-1" id="524"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Center" keyEquivalent="|" id="499">
+                                            <connections>
+                                                <action selector="alignCenter:" target="-1" id="518"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Justify" id="500">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="alignJustified:" target="-1" id="523"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Align Right" keyEquivalent="}" id="501">
+                                            <connections>
+                                                <action selector="alignRight:" target="-1" id="521"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="502"/>
+                                        <menuItem title="Writing Direction" id="503">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <menu key="submenu" title="Writing Direction" id="508">
+                                                <items>
+                                                    <menuItem title="Paragraph" enabled="NO" id="509">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem id="510">
+                                                        <string key="title">	Default</string>
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="makeBaseWritingDirectionNatural:" target="-1" id="525"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem id="511">
+                                                        <string key="title">	Left to Right</string>
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="makeBaseWritingDirectionLeftToRight:" target="-1" id="526"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem id="512">
+                                                        <string key="title">	Right to Left</string>
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="makeBaseWritingDirectionRightToLeft:" target="-1" id="527"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem isSeparatorItem="YES" id="513"/>
+                                                    <menuItem title="Selection" enabled="NO" id="514">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem id="515">
+                                                        <string key="title">	Default</string>
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="makeTextWritingDirectionNatural:" target="-1" id="528"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem id="516">
+                                                        <string key="title">	Left to Right</string>
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="makeTextWritingDirectionLeftToRight:" target="-1" id="529"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem id="517">
+                                                        <string key="title">	Right to Left</string>
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="makeTextWritingDirectionRightToLeft:" target="-1" id="530"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                </items>
+                                            </menu>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="504"/>
+                                        <menuItem title="Show Ruler" id="505">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="toggleRuler:" target="-1" id="520"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Copy Ruler" keyEquivalent="c" id="506">
+                                            <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="copyRuler:" target="-1" id="522"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Paste Ruler" keyEquivalent="v" id="507">
+                                            <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="pasteRuler:" target="-1" id="519"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="View" id="295">
+                    <menu key="submenu" title="View" id="296">
+                        <items>
+                            <menuItem title="Show Toolbar" keyEquivalent="t" id="297">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="toggleToolbarShown:" target="-1" id="366"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Customize Toolbar…" id="298">
+                                <connections>
+                                    <action selector="runToolbarCustomizationPalette:" target="-1" id="365"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Window" id="19">
+                    <menu key="submenu" title="Window" systemMenu="window" id="24">
+                        <items>
+                            <menuItem title="Minimize" keyEquivalent="m" id="23">
+                                <connections>
+                                    <action selector="performMiniaturize:" target="-1" id="37"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Zoom" id="239">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performZoom:" target="-1" id="240"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="92">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Bring All to Front" id="5">
+                                <connections>
+                                    <action selector="arrangeInFront:" target="-1" id="39"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Help" id="490">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Help" systemMenu="help" id="491">
+                        <items>
+                            <menuItem title="handyLock Help" keyEquivalent="?" id="492">
+                                <connections>
+                                    <action selector="showHelp:" target="-1" id="493"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+            </items>
+        </menu>
+        <customObject id="494" customClass="AppDelegate">
+            <connections>
+                <outlet property="BTSignalStrenghtDBText" destination="DZK-mX-8Ei" id="hO1-3t-Msd"/>
+                <outlet property="BTSignalStrenghtText" destination="t3e-gb-OSs" id="92Q-XE-UIU"/>
+                <outlet property="BTSignalStrenghtValueText" destination="UZi-NF-z2Q" id="FBO-wh-u2v"/>
+                <outlet property="aboutSignalStrenghtGage" destination="g2a-gR-hyu" id="5Bo-KG-0B6"/>
+                <outlet property="aboutVersionTextField" destination="qry-D9-wVj" id="Me0-m2-lFh"/>
+                <outlet property="appWindow" destination="fD4-cJ-pGz" id="dES-HT-8W7"/>
+                <outlet property="btPollFrequency" destination="4rp-KO-BQC" id="OgC-En-bjk"/>
+                <outlet property="checkUpdatesOnStartup" destination="pif-kz-4BD" id="qUF-7L-14P"/>
+                <outlet property="delayBeforeLocking" destination="gcI-ut-7mb" id="QCj-jb-7NK"/>
+                <outlet property="deviceDistance" destination="isQ-Ss-xtf" id="FSy-eW-2sR"/>
+                <outlet property="deviceName" destination="lT9-Ih-DP3" id="As4-ub-Bp5"/>
+                <outlet property="displaySleepTimer" destination="w12-eM-Nar" id="GU6-X6-O6u"/>
+                <outlet property="distanceRange" destination="hJA-GX-3I5" id="0br-02-ZEI"/>
+                <outlet property="farReading" destination="1oB-uz-fyA" id="1yV-DP-IoK"/>
+                <outlet property="inRangeAppField" destination="9ex-AF-j4C" id="5UF-qN-FaZ"/>
+                <outlet property="lockScreenMethodButton" destination="TLH-J0-s2X" id="X4X-vK-d19"/>
+                <outlet property="lockingEnabled" destination="wGB-yW-Tv3" id="GXm-JF-7XV"/>
+                <outlet property="logToFileCheckbox" destination="0nc-Rn-x5u" id="rMF-CV-Aqg"/>
+                <outlet property="nearReading" destination="t6N-51-VZS" id="znd-mb-JDw"/>
+                <outlet property="outOfRangeAppField" destination="3dO-cQ-vgq" id="7jZ-9I-yhd"/>
+                <outlet property="passwordWindow" destination="pHw-jO-MbC" id="8Ul-3K-YxF"/>
+                <outlet property="pinCode" destination="0r2-Mf-DpU" id="q8M-bK-QbE"/>
+                <outlet property="prefsWindow" destination="fD4-cJ-pGz" id="WYn-q7-kd9"/>
+                <outlet property="progressIndicator" destination="xmk-a2-jYy" id="zSf-KQ-Yqn"/>
+                <outlet property="reactionSpeed" destination="1wW-o9-hL8" id="DAB-fC-rip"/>
+                <outlet property="signalStrenghtGage" destination="g2a-gR-hyu" id="801-Bt-l4H"/>
+                <outlet property="signalStrength" destination="UZi-NF-z2Q" id="Snc-q8-zmX"/>
+                <outlet property="startAtLoginCheckbox" destination="6TH-eE-E3S" id="BDp-Rm-n0N"/>
+                <outlet property="verifyPinCode" destination="Z5c-sf-Jql" id="gfJ-6w-JKT"/>
+                <outlet property="window" destination="fD4-cJ-pGz" id="Cp2-WJ-tX5"/>
+            </connections>
+        </customObject>
+        <customObject id="420" customClass="NSFontManager"/>
+        <window title="handyLock Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="fD4-cJ-pGz">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+            <rect key="contentRect" x="335" y="320" width="642" height="314"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
+            <view key="contentView" id="5IZ-fI-BY7">
+                <rect key="frame" x="0.0" y="0.0" width="642" height="314"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <tabView id="zPP-ex-tOE">
+                        <rect key="frame" x="13" y="39" width="616" height="269"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <animations/>
+                        <font key="font" metaFont="system"/>
+                        <tabViewItems>
+                            <tabViewItem label="Device Config" identifier="2" id="v5i-xV-RYh">
+                                <view key="view" id="5gm-eT-y6a">
+                                    <rect key="frame" x="10" y="33" width="596" height="223"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <box autoresizesSubviews="NO" title="Bluetooth Device" borderType="line" id="WzU-Qg-EVT">
+                                            <rect key="frame" x="6" y="114" width="584" height="109"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <view key="contentView" id="tz4-Sh-ZGy">
+                                                <rect key="frame" x="1" y="1" width="582" height="93"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <box autoresizesSubviews="NO" title="Box" borderType="line" titlePosition="noTitle" id="yhB-Lj-jxp">
+                                                        <rect key="frame" x="15" y="41" width="552" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <view key="contentView" id="JYz-93-Lpa">
+                                                            <rect key="frame" x="1" y="1" width="550" height="42"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <subviews>
+                                                                <textField verticalHuggingPriority="750" id="lT9-Ih-DP3">
+                                                                    <rect key="frame" x="15" y="14" width="388" height="17"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                    <animations/>
+                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Select the desired Bluetooth device for proximity lock" id="hd8-ss-WkB">
+                                                                        <font key="font" metaFont="system"/>
+                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                    </textFieldCell>
+                                                                </textField>
+                                                                <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" minValue="16" maxValue="100" doubleValue="16" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="xmk-a2-jYy">
+                                                                    <rect key="frame" x="516" y="14" width="16" height="16"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                    <animations/>
+                                                                </progressIndicator>
+                                                            </subviews>
+                                                            <animations/>
+                                                        </view>
+                                                        <animations/>
+                                                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </box>
+                                                    <button verticalHuggingPriority="750" id="iaI-Og-uov">
+                                                        <rect key="frame" x="12" y="7" width="77" height="32"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <animations/>
+                                                        <buttonCell key="cell" type="push" title="Select" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HSd-Bx-FRk">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="changeDevice:" target="494" id="J1t-ZS-2jn"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button verticalHuggingPriority="750" id="V4C-Lg-LEk">
+                                                        <rect key="frame" x="480" y="7" width="90" height="32"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <animations/>
+                                                        <buttonCell key="cell" type="push" title="Remove" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cGZ-P9-6Pr">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="removeDevice:" target="494" id="3YY-ur-I3N"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <animations/>
+                                            </view>
+                                            <animations/>
+                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </box>
+                                        <box autoresizesSubviews="NO" title="Security" borderType="line" id="TEu-pw-n3D">
+                                            <rect key="frame" x="6" y="49" width="584" height="61"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <view key="contentView" id="Llo-An-lDA">
+                                                <rect key="frame" x="1" y="1" width="582" height="45"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <button verticalHuggingPriority="750" id="V1z-iG-JZK">
+                                                        <rect key="frame" x="229" y="7" width="125" height="32"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <animations/>
+                                                        <buttonCell key="cell" type="push" title="Set password" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Jss-YG-Eky">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="openPasswordWindow:" target="494" id="o4v-WI-SN2"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <animations/>
+                                            </view>
+                                            <animations/>
+                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </box>
+                                    </subviews>
+                                    <animations/>
+                                </view>
+                            </tabViewItem>
+                            <tabViewItem label="Signal" identifier="" id="a88-BC-vmg">
+                                <view key="view" id="exn-OW-Xzn">
+                                    <rect key="frame" x="10" y="33" width="596" height="223"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <box autoresizesSubviews="NO" title="Bluetooth Signal Info" borderType="line" id="7fm-06-bWW">
+                                            <rect key="frame" x="6" y="91" width="584" height="132"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <view key="contentView" id="4O0-sV-Npm">
+                                                <rect key="frame" x="1" y="1" width="582" height="116"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <textField verticalHuggingPriority="750" id="t3e-gb-OSs">
+                                                        <rect key="frame" x="47" y="39" width="139" height="17"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <animations/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Averaged signal level:" id="9JN-Il-xc3">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <levelIndicator verticalHuggingPriority="750" id="g2a-gR-hyu">
+                                                        <rect key="frame" x="284" y="39" width="280" height="16"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <animations/>
+                                                        <levelIndicatorCell key="cell" alignment="left" minValue="-127" warningValue="-50" criticalValue="-80" levelIndicatorStyle="continuousCapacity" id="WL6-za-Zsb"/>
+                                                    </levelIndicator>
+                                                    <textField verticalHuggingPriority="750" id="UZi-NF-z2Q">
+                                                        <rect key="frame" x="190" y="39" width="53" height="17"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <animations/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="-45" id="1w0-MH-Ix5">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField verticalHuggingPriority="750" id="1oB-uz-fyA">
+                                                        <rect key="frame" x="190" y="64" width="53" height="17"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <animations/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0" id="6q9-at-xRl">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField verticalHuggingPriority="750" id="t6N-51-VZS">
+                                                        <rect key="frame" x="190" y="89" width="53" height="17"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <animations/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0" id="pFe-z1-D2i">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                        <connections>
+                                                            <binding destination="OjQ-uP-NFb" name="value" keyPath="values.nearReading" id="DiL-Qo-xpG"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Smk-Te-Uao">
+                                                        <rect key="frame" x="16" y="89" width="170" height="17"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <animations/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Current device signal level:" id="XRi-8Q-6yi">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="7VS-ED-HtG">
+                                                        <rect key="frame" x="29" y="64" width="157" height="17"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <animations/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Out of range signal level:" id="Izk-Ix-VgD">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="EoX-u9-X0u">
+                                                        <rect key="frame" x="17" y="14" width="170" height="17"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <animations/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Estimated device distance:" id="VWa-A1-WXJ">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="isQ-Ss-xtf">
+                                                        <rect key="frame" x="190" y="14" width="53" height="17"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <animations/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="1" id="z7q-gM-9kF">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField verticalHuggingPriority="750" id="5go-qx-S5t">
+                                                        <rect key="frame" x="247" y="89" width="28" height="17"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <animations/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="DB" id="pyc-dp-LAo">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField verticalHuggingPriority="750" id="XLp-d0-SEa">
+                                                        <rect key="frame" x="247" y="64" width="28" height="17"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <animations/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="DB" id="P2a-Je-rd1">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField verticalHuggingPriority="750" id="sBO-wn-XH3">
+                                                        <rect key="frame" x="247" y="14" width="54" height="17"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <animations/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="meter(s)" id="7j5-bn-t83">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField verticalHuggingPriority="750" id="DZK-mX-8Ei">
+                                                        <rect key="frame" x="247" y="39" width="28" height="17"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <animations/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="DB" id="ygG-Of-q2Y">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                </subviews>
+                                                <animations/>
+                                            </view>
+                                            <animations/>
+                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </box>
+                                        <slider verticalHuggingPriority="750" id="hJA-GX-3I5">
+                                            <rect key="frame" x="240" y="45" width="220" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <sliderCell key="cell" state="on" alignment="left" minValue="5" maxValue="50" doubleValue="10" tickMarkPosition="above" numberOfTickMarks="10" allowsTickMarkValuesOnly="YES" sliderType="linear" id="HUA-B0-eSp"/>
+                                            <connections>
+                                                <binding destination="OjQ-uP-NFb" name="value" keyPath="values.distanceRange" id="8DD-rU-TSI"/>
+                                            </connections>
+                                        </slider>
+                                        <textField verticalHuggingPriority="750" id="JMs-Jd-NNG">
+                                            <rect key="frame" x="195" y="47" width="42" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="closer" id="k0u-CQ-nk3">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="tb6-1c-gVt">
+                                            <rect key="frame" x="463" y="47" width="47" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="farther" id="IIx-Kc-l3Q">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <slider verticalHuggingPriority="750" id="1wW-o9-hL8">
+                                            <rect key="frame" x="239" y="13" width="220" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <sliderCell key="cell" alignment="left" maxValue="0.90000000000000002" doubleValue="0.20000000000000001" tickMarkPosition="above" numberOfTickMarks="10" allowsTickMarkValuesOnly="YES" sliderType="linear" id="4Kh-Wv-Ve8"/>
+                                            <connections>
+                                                <action selector="saveReactionSpeed:" target="494" id="Mpc-rZ-HAc"/>
+                                                <binding destination="OjQ-uP-NFb" name="value" keyPath="values.reactionSpeed" id="N1A-cU-uHG"/>
+                                            </connections>
+                                        </slider>
+                                        <textField verticalHuggingPriority="750" id="KY5-eg-09k">
+                                            <rect key="frame" x="87" y="15" width="104" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Reaction speed:" id="SFI-ab-xvQ">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="43u-Ze-F5O">
+                                            <rect key="frame" x="195" y="15" width="41" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="faster" id="Gun-DN-Cwc">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1p2-p3-kjY">
+                                            <rect key="frame" x="463" y="15" width="45" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="slower" id="gxv-21-U2E">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="LdL-y0-4Il">
+                                            <rect key="frame" x="97" y="47" width="94" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Lock distance:" id="Rvh-WG-ux3">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                    </subviews>
+                                    <animations/>
+                                </view>
+                            </tabViewItem>
+                            <tabViewItem label="Options" identifier="" id="H1f-c1-dqr">
+                                <view key="view" id="GCZ-aA-nO9">
+                                    <rect key="frame" x="10" y="33" width="596" height="223"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <tabView id="T6P-85-VMo">
+                                            <rect key="frame" x="10" y="7" width="576" height="211"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <font key="font" metaFont="system"/>
+                                            <tabViewItems>
+                                                <tabViewItem label="Lock Screen" identifier="" id="FpO-eS-WrN">
+                                                    <view key="view" id="Ltu-t1-mOx">
+                                                        <rect key="frame" x="10" y="33" width="556" height="165"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <subviews>
+                                                            <textField verticalHuggingPriority="750" id="FrZ-71-G2i">
+                                                                <rect key="frame" x="15" y="144" width="134" height="17"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <animations/>
+                                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Lock screen method:" id="ZDJ-d6-OG6">
+                                                                    <font key="font" metaFont="system"/>
+                                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                            </textField>
+                                                            <popUpButton verticalHuggingPriority="750" id="TLH-J0-s2X">
+                                                                <rect key="frame" x="153" y="138" width="297" height="26"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <animations/>
+                                                                <popUpButtonCell key="cell" type="push" title="Use handyLock custom lock screen" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="GL9-6s-z8w" id="KZG-NH-RLc">
+                                                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                                    <font key="font" metaFont="menu"/>
+                                                                    <menu key="menu" id="Ekz-yx-jfe">
+                                                                        <items>
+                                                                            <menuItem title="Use OSX Login Window" toolTip="This is the OSX standard Login Window. It will NOT automatically unlock when you get back in range." id="Ojc-TF-p1M"/>
+                                                                            <menuItem title="Use OSX Screen Saver" toolTip="This is the OSX standard ScreenSaver authentication screen. It will NOT automatically unlock when you get back in range." id="4HJ-93-wO5"/>
+                                                                            <menuItem title="Use handyLock custom lock screen" state="on" toolTip="This is handyLock custom lock screen. It will automatically unlock when you get back in range." id="GL9-6s-z8w">
+                                                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                                                            </menuItem>
+                                                                            <menuItem title="Use OSX lock screen" toolTip="This is the OSX standard lock Screen. It will NOT automatically unlock when you get back in range." id="MFP-dO-8Ww"/>
+                                                                            <menuItem title="Only run in/out of range applications" toolTip="This is the OSX standard lock Screen. It will NOT automatically unlock when you get back in range." id="gPa-k1-GxT"/>
+                                                                        </items>
+                                                                    </menu>
+                                                                </popUpButtonCell>
+                                                                <connections>
+                                                                    <action selector="lockScreenMethodChanged:" target="494" id="aXl-XA-smm"/>
+                                                                    <binding destination="OjQ-uP-NFb" name="selectedIndex" keyPath="values.lockScreenMethod" id="2o1-yF-SKg"/>
+                                                                </connections>
+                                                            </popUpButton>
+                                                            <button id="GgS-Ie-UpN">
+                                                                <rect key="frame" x="15" y="63" width="248" height="18"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <animations/>
+                                                                <buttonCell key="cell" type="check" title="Use custom lock screen background" bezelStyle="regularSquare" imagePosition="left" inset="2" id="1gd-V5-4Jc">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <connections>
+                                                                    <binding destination="OjQ-uP-NFb" name="value" keyPath="values.lockScreenBackground" id="rZA-pn-0tT"/>
+                                                                    <binding destination="OjQ-uP-NFb" name="enabled" keyPath="values.lockScreenMethod" id="BOu-mb-glU">
+                                                                        <dictionary key="options">
+                                                                            <string key="NSValueTransformerName">lockscreenValueTransformer</string>
+                                                                        </dictionary>
+                                                                    </binding>
+                                                                </connections>
+                                                            </button>
+                                                            <button verticalHuggingPriority="750" id="vXx-iq-isg">
+                                                                <rect key="frame" x="313" y="54" width="140" height="32"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <animations/>
+                                                                <buttonCell key="cell" type="push" title="Set Background" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zMj-wP-kPH">
+                                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <connections>
+                                                                    <action selector="setBackgroundAction:" target="494" id="HgY-xY-bJg"/>
+                                                                    <binding destination="OjQ-uP-NFb" name="enabled" keyPath="values.lockScreenBackground" id="zab-CX-quU"/>
+                                                                    <binding destination="OjQ-uP-NFb" name="enabled2" keyPath="values.lockScreenMethod" previousBinding="zab-CX-quU" id="ESG-e5-8lk">
+                                                                        <dictionary key="options">
+                                                                            <integer key="NSMultipleValuesPlaceholder" value="-1"/>
+                                                                            <integer key="NSNoSelectionPlaceholder" value="-1"/>
+                                                                            <integer key="NSNotApplicablePlaceholder" value="-1"/>
+                                                                            <integer key="NSNullPlaceholder" value="-1"/>
+                                                                            <string key="NSValueTransformerName">lockscreenValueTransformer</string>
+                                                                        </dictionary>
+                                                                    </binding>
+                                                                </connections>
+                                                            </button>
+                                                            <textField verticalHuggingPriority="750" id="0R2-PU-0Bs">
+                                                                <rect key="frame" x="15" y="89" width="200" height="17"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <animations/>
+                                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Display Sleep delay:" id="ODW-ed-xyV">
+                                                                    <font key="font" metaFont="system"/>
+                                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                            </textField>
+                                                            <textField toolTip="Valid value from 0 (right away) to 180 minutes (3 hours)" verticalHuggingPriority="750" id="w12-eM-Nar" customClass="NumberField">
+                                                                <rect key="frame" x="151" y="87" width="46" height="22"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <animations/>
+                                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="5" drawsBackground="YES" id="ky9-aH-TK1">
+                                                                    <numberFormatter key="formatter" formatterBehavior="default10_4" positiveFormat="#,##0.###" negativeFormat="#,##0.###" numberStyle="decimal" paddingCharacter="*" minimumIntegerDigits="1" maximumIntegerDigits="309" maximumFractionDigits="3" decimalSeparator="." groupingSeparator="," currencyDecimalSeparator="." plusSign="+" minusSign="-" notANumberSymbol="NaN" perMillSymbol="‰" percentSymbol="%" exponentSymbol="E" positivePrefix="" positiveSuffix="" negativePrefix="-" negativeSuffix="" id="xId-6c-qk1"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                                <connections>
+                                                                    <binding destination="OjQ-uP-NFb" name="value" keyPath="values.displaySleepTimer" id="e32-ct-ekL"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <textField verticalHuggingPriority="750" id="jJc-zm-e85">
+                                                                <rect key="frame" x="15" y="117" width="294" height="17"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <animations/>
+                                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Delay before locking screen when out of range:" id="hcc-sa-BUC">
+                                                                    <font key="font" metaFont="system"/>
+                                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                            </textField>
+                                                            <textField verticalHuggingPriority="750" id="bjd-mk-5P9">
+                                                                <rect key="frame" x="203" y="89" width="177" height="19"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <animations/>
+                                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="minutes" id="5Ot-LF-IVa">
+                                                                    <font key="font" metaFont="system"/>
+                                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                            </textField>
+                                                            <textField toolTip="Valid value from 0 to 180 seconds" verticalHuggingPriority="750" id="gcI-ut-7mb" customClass="NumberField">
+                                                                <rect key="frame" x="311" y="114" width="46" height="22"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <animations/>
+                                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="10" drawsBackground="YES" id="GVC-fm-nCH">
+                                                                    <numberFormatter key="formatter" formatterBehavior="default10_4" positiveFormat="#,##0.###" negativeFormat="#,##0.###" numberStyle="decimal" paddingCharacter="*" minimumIntegerDigits="1" maximumIntegerDigits="309" maximumFractionDigits="3" decimalSeparator="." groupingSeparator="," currencyDecimalSeparator="." plusSign="+" minusSign="-" notANumberSymbol="NaN" perMillSymbol="‰" percentSymbol="%" exponentSymbol="E" positivePrefix="" positiveSuffix="" negativePrefix="-" negativeSuffix="" id="B13-eV-gaU"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                                <connections>
+                                                                    <binding destination="OjQ-uP-NFb" name="value" keyPath="values.delayBeforeLocking" id="Vqx-s2-ghk"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <textField verticalHuggingPriority="750" id="85t-NP-oDX">
+                                                                <rect key="frame" x="363" y="117" width="57" height="17"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <animations/>
+                                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="seconds" id="hRV-W6-ZO7">
+                                                                    <font key="font" metaFont="system"/>
+                                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                            </textField>
+                                                        </subviews>
+                                                        <animations/>
+                                                    </view>
+                                                </tabViewItem>
+                                                <tabViewItem label="Startup" identifier="" id="coU-YU-hCM">
+                                                    <view key="view" id="T6c-we-ccR">
+                                                        <rect key="frame" x="10" y="33" width="556" height="165"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <subviews>
+                                                            <button id="6TH-eE-E3S">
+                                                                <rect key="frame" x="15" y="146" width="104" height="18"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <animations/>
+                                                                <buttonCell key="cell" type="check" title="Start at login" bezelStyle="regularSquare" imagePosition="left" inset="2" id="rwX-c0-JU9">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <connections>
+                                                                    <action selector="startAtLoginTriggered:" target="494" id="wLw-XZ-NbP"/>
+                                                                    <binding destination="OjQ-uP-NFb" name="value" keyPath="values.startAtLogin" id="YfL-hm-vQ8"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button id="pif-kz-4BD">
+                                                                <rect key="frame" x="15" y="124" width="207" height="18"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <animations/>
+                                                                <buttonCell key="cell" type="check" title="Check for updates on startup" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="gSX-C1-kDp">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <connections>
+                                                                    <binding destination="OjQ-uP-NFb" name="value" keyPath="values.updating" id="9vs-Nt-seo"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <animations/>
+                                                    </view>
+                                                </tabViewItem>
+                                                <tabViewItem label="Bluetooth" identifier="" id="03d-xY-KBc">
+                                                    <view key="view" id="Z8a-wa-GPq">
+                                                        <rect key="frame" x="10" y="33" width="556" height="165"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <subviews>
+                                                            <textField verticalHuggingPriority="750" id="1dp-MC-dQp">
+                                                                <rect key="frame" x="15" y="142" width="164" height="17"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <animations/>
+                                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Bluetooth Poll Frequency:" id="SAb-mS-n4r">
+                                                                    <font key="font" metaFont="system"/>
+                                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                            </textField>
+                                                            <textField toolTip="Valid value from 2 to 60 seconds" verticalHuggingPriority="750" id="4rp-KO-BQC" customClass="PollFrequencyNumber">
+                                                                <rect key="frame" x="185" y="140" width="46" height="22"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <animations/>
+                                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" toolTip="Valid value from 2 to 60 seconds" title="2" drawsBackground="YES" id="0U5-PG-y5m">
+                                                                    <numberFormatter key="formatter" formatterBehavior="default10_4" positiveFormat="#,##0.###" negativeFormat="#,##0.###" numberStyle="decimal" paddingCharacter="*" minimumIntegerDigits="1" maximumIntegerDigits="309" maximumFractionDigits="3" decimalSeparator="." groupingSeparator="," currencyDecimalSeparator="." plusSign="+" minusSign="-" notANumberSymbol="NaN" perMillSymbol="‰" percentSymbol="%" exponentSymbol="E" positivePrefix="" positiveSuffix="" negativePrefix="-" negativeSuffix="" id="6bx-pP-x1a"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                                <connections>
+                                                                    <binding destination="OjQ-uP-NFb" name="value" keyPath="values.btPollFrequency" id="nPU-bx-kdU"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <textField verticalHuggingPriority="750" id="Te8-rA-oZF">
+                                                                <rect key="frame" x="237" y="142" width="57" height="17"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <animations/>
+                                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="seconds" id="eTi-ao-3Ks">
+                                                                    <font key="font" metaFont="system"/>
+                                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                            </textField>
+                                                            <button id="0nc-Rn-x5u">
+                                                                <rect key="frame" x="15" y="118" width="218" height="18"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <animations/>
+                                                                <buttonCell key="cell" type="check" title="Log bluetooth signal level to file" bezelStyle="regularSquare" imagePosition="left" inset="2" id="KgQ-C9-Dbn">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <connections>
+                                                                    <binding destination="OjQ-uP-NFb" name="value" keyPath="values.logToFile" id="xOh-2J-7hf"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <animations/>
+                                                    </view>
+                                                </tabViewItem>
+                                                <tabViewItem label="Applications" identifier="" id="HCZ-5Q-a6y">
+                                                    <view key="view" id="BrZ-iq-jrv">
+                                                        <rect key="frame" x="10" y="33" width="556" height="165"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <subviews>
+                                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="pYh-lD-NHW">
+                                                                <rect key="frame" x="15" y="143" width="86" height="17"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <animations/>
+                                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Out of range:" id="1p1-9E-cc5">
+                                                                    <font key="font" metaFont="system"/>
+                                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                            </textField>
+                                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="otG-td-9x3">
+                                                                <rect key="frame" x="43" y="108" width="59" height="17"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <animations/>
+                                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="In range:" id="1lC-kc-Zmj">
+                                                                    <font key="font" metaFont="system"/>
+                                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                            </textField>
+                                                            <button toolTip="Select application" verticalHuggingPriority="750" id="BhQ-DR-drs">
+                                                                <rect key="frame" x="286" y="134" width="79" height="32"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <animations/>
+                                                                <buttonCell key="cell" type="push" title="Select" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hS6-rw-ZOD">
+                                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <connections>
+                                                                    <action selector="outOfRangeApplicationSelection:" target="494" id="lIG-OK-iFV"/>
+                                                                </connections>
+                                                            </button>
+                                                            <textField toolTip="Name of selected application to run when the BT device is going out of range" verticalHuggingPriority="750" id="3dO-cQ-vgq">
+                                                                <rect key="frame" x="104" y="140" width="180" height="22"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <animations/>
+                                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="cg8-l9-4cB">
+                                                                    <font key="font" metaFont="system"/>
+                                                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                                <connections>
+                                                                    <binding destination="OjQ-uP-NFb" name="value" keyPath="values.outOfRangeApp" id="mLg-Yl-zNr"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <button toolTip="Clear application selection" verticalHuggingPriority="750" id="ZbX-yb-Qrh">
+                                                                <rect key="frame" x="364" y="134" width="73" height="32"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <animations/>
+                                                                <buttonCell key="cell" type="push" title="Clear" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Gpf-tv-QkR">
+                                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <connections>
+                                                                    <action selector="clearOutOfRangeApp:" target="494" id="dzO-V6-tIH"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button toolTip="Clear application selection" verticalHuggingPriority="750" id="cV9-FY-gaR">
+                                                                <rect key="frame" x="364" y="99" width="73" height="32"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <animations/>
+                                                                <buttonCell key="cell" type="push" title="Clear" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0Aa-cx-30x">
+                                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <connections>
+                                                                    <action selector="clearInRangeApp:" target="494" id="krj-kv-xYr"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button toolTip="Select application" verticalHuggingPriority="750" id="Tmb-tE-yLC">
+                                                                <rect key="frame" x="287" y="99" width="79" height="32"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <animations/>
+                                                                <buttonCell key="cell" type="push" title="Select" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="b6T-ed-YgK">
+                                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <connections>
+                                                                    <action selector="inRangeApplicationSelection:" target="494" id="WyA-ZY-Vkc"/>
+                                                                </connections>
+                                                            </button>
+                                                            <textField toolTip="Name of selected application to run when the BT device is going back in range" verticalHuggingPriority="750" id="9ex-AF-j4C">
+                                                                <rect key="frame" x="104" y="105" width="180" height="22"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <animations/>
+                                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="uhf-Yq-3ou">
+                                                                    <font key="font" metaFont="system"/>
+                                                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                                <connections>
+                                                                    <binding destination="OjQ-uP-NFb" name="value" keyPath="values.inRangeApp" id="Xws-K1-dEE"/>
+                                                                </connections>
+                                                            </textField>
+                                                        </subviews>
+                                                        <animations/>
+                                                    </view>
+                                                </tabViewItem>
+                                                <tabViewItem label="Sounds" identifier="" id="6fN-PR-ogP">
+                                                    <view key="view" id="6u9-KP-Od9">
+                                                        <rect key="frame" x="10" y="33" width="556" height="165"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <subviews>
+                                                            <button id="TPz-GD-h4d">
+                                                                <rect key="frame" x="33" y="121" width="174" height="18"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <animations/>
+                                                                <buttonCell key="cell" type="check" title="Use custom lock sounds" bezelStyle="regularSquare" imagePosition="left" inset="2" id="odO-Me-o1H">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <connections>
+                                                                    <binding destination="OjQ-uP-NFb" name="value" keyPath="values.customLockScreenSounds" id="xHL-qU-5wD"/>
+                                                                    <binding destination="OjQ-uP-NFb" name="enabled" keyPath="values.playLockingSound" id="Rs9-bJ-YDm"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button verticalHuggingPriority="750" id="Ne9-vG-yGL">
+                                                                <rect key="frame" x="313" y="111" width="139" height="32"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <animations/>
+                                                                <buttonCell key="cell" type="push" title="Set Lock Sound" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="irV-Tx-3u0">
+                                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <connections>
+                                                                    <action selector="setLockSound:" target="494" id="yjL-BU-Egd"/>
+                                                                    <binding destination="OjQ-uP-NFb" name="enabled" keyPath="values.customLockScreenSounds" id="J05-Fh-Q6L"/>
+                                                                    <binding destination="OjQ-uP-NFb" name="enabled2" keyPath="values.playLockingSound" previousBinding="J05-Fh-Q6L" id="YYx-jE-JxN">
+                                                                        <dictionary key="options">
+                                                                            <integer key="NSMultipleValuesPlaceholder" value="-1"/>
+                                                                            <integer key="NSNoSelectionPlaceholder" value="-1"/>
+                                                                            <integer key="NSNotApplicablePlaceholder" value="-1"/>
+                                                                            <integer key="NSNullPlaceholder" value="-1"/>
+                                                                        </dictionary>
+                                                                    </binding>
+                                                                </connections>
+                                                            </button>
+                                                            <button id="IJ6-Av-28y">
+                                                                <rect key="frame" x="15" y="146" width="292" height="18"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <animations/>
+                                                                <buttonCell key="cell" type="check" title="Play locking sound when going out of range" bezelStyle="regularSquare" imagePosition="left" inset="2" id="UW8-7m-ZZk">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <connections>
+                                                                    <binding destination="OjQ-uP-NFb" name="value" keyPath="values.playLockingSound" id="NKY-EJ-NQI"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button id="fJh-7v-vGF">
+                                                                <rect key="frame" x="15" y="95" width="283" height="18"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <animations/>
+                                                                <buttonCell key="cell" type="check" title="Play locking sound when going in of range" bezelStyle="regularSquare" imagePosition="left" inset="2" id="1pp-sM-VAU">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <connections>
+                                                                    <binding destination="OjQ-uP-NFb" name="value" keyPath="values.playUnlockingSound" id="c69-4g-nkT"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button id="ZuM-xo-if2">
+                                                                <rect key="frame" x="33" y="68" width="183" height="18"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <animations/>
+                                                                <buttonCell key="cell" type="check" title="Use custom unlock sound" bezelStyle="regularSquare" imagePosition="left" inset="2" id="mvq-4C-22Y">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <connections>
+                                                                    <binding destination="OjQ-uP-NFb" name="value" keyPath="values.customUnlockScreenSounds" id="yeU-Xp-v1g"/>
+                                                                    <binding destination="OjQ-uP-NFb" name="enabled" keyPath="values.playUnlockingSound" id="MAy-lt-4Ni"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button verticalHuggingPriority="750" id="gzw-fR-Wdb">
+                                                                <rect key="frame" x="301" y="59" width="152" height="32"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <animations/>
+                                                                <buttonCell key="cell" type="push" title="Set Unlock Sound" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kht-D1-Vrt">
+                                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <connections>
+                                                                    <action selector="setUnlockSound:" target="494" id="mLH-1p-Yww"/>
+                                                                    <binding destination="OjQ-uP-NFb" name="enabled" keyPath="values.customUnlockScreenSounds" id="U0z-d0-ziS"/>
+                                                                    <binding destination="OjQ-uP-NFb" name="enabled2" keyPath="values.playUnlockingSound" previousBinding="U0z-d0-ziS" id="nxZ-cb-83s">
+                                                                        <dictionary key="options">
+                                                                            <integer key="NSMultipleValuesPlaceholder" value="-1"/>
+                                                                            <integer key="NSNoSelectionPlaceholder" value="-1"/>
+                                                                            <integer key="NSNotApplicablePlaceholder" value="-1"/>
+                                                                            <integer key="NSNullPlaceholder" value="-1"/>
+                                                                        </dictionary>
+                                                                    </binding>
+                                                                </connections>
+                                                            </button>
+                                                            <button verticalHuggingPriority="750" id="bvE-v4-PYZ">
+                                                                <rect key="frame" x="343" y="137" width="68" height="32"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <animations/>
+                                                                <buttonCell key="cell" type="push" title="Play" bezelStyle="rounded" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="U5m-Yg-pKR">
+                                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <connections>
+                                                                    <action selector="playLockSound:" target="494" id="oP7-El-XuR"/>
+                                                                    <binding destination="OjQ-uP-NFb" name="enabled" keyPath="values.playLockingSound" id="TbE-yd-7RA"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button verticalHuggingPriority="750" id="by4-lx-CSm">
+                                                                <rect key="frame" x="343" y="86" width="68" height="32"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <animations/>
+                                                                <buttonCell key="cell" type="push" title="Play" bezelStyle="rounded" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LZI-iM-lu8">
+                                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <connections>
+                                                                    <action selector="playUnlockSound:" target="494" id="B7t-Wv-MwE"/>
+                                                                    <binding destination="OjQ-uP-NFb" name="enabled" keyPath="values.playUnlockingSound" id="9g3-tH-kZ9"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <animations/>
+                                                    </view>
+                                                </tabViewItem>
+                                            </tabViewItems>
+                                        </tabView>
+                                    </subviews>
+                                    <animations/>
+                                </view>
+                            </tabViewItem>
+                            <tabViewItem label="About" identifier="" id="xR8-tz-FW0">
+                                <view key="view" id="YpS-QA-gA9">
+                                    <rect key="frame" x="10" y="33" width="596" height="223"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView id="4hF-0c-hzE">
+                                            <rect key="frame" x="232" y="113" width="133" height="92"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AppIcon" id="4BT-pR-CNW"/>
+                                        </imageView>
+                                        <textField verticalHuggingPriority="750" id="2HB-Az-xXb">
+                                            <rect key="frame" x="209" y="89" width="179" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" enabled="NO" refusesFirstResponder="YES" sendsActionOnEndEditing="YES" alignment="center" title="handyLock" id="KMO-La-fIj">
+                                                <font key="font" metaFont="cellTitle"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="qry-D9-wVj">
+                                            <rect key="frame" x="243" y="68" width="111" height="13"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="v1.0.8" id="vQQ-Ou-m23">
+                                                <font key="font" metaFont="system" size="10"/>
+                                                <color key="textColor" red="0.24456521740000001" green="0.24456521740000001" blue="0.24456521740000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="GTX-zl-8e5">
+                                            <rect key="frame" x="100" y="46" width="396" height="14"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" enabled="NO" refusesFirstResponder="YES" sendsActionOnEndEditing="YES" alignment="center" title="Copyright © 2012-2014  Netputing Systems Inc." id="X1J-bd-4dQ">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button id="vax-E1-jvy">
+                                            <rect key="frame" x="239" y="17" width="119" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="square" title="www.netputing.com" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Z1H-2S-g7W">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system" size="10"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="openWebSite:" target="494" id="ctZ-Bm-fOO"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <animations/>
+                                </view>
+                            </tabViewItem>
+                        </tabViewItems>
+                    </tabView>
+                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" id="wXE-QI-io1">
+                        <rect key="frame" x="599" y="17" width="25" height="25"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <animations/>
+                        <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wyd-MI-qTf">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="getHelp:" target="494" id="hLA-8Y-EeA"/>
+                        </connections>
+                    </button>
+                    <button id="wGB-yW-Tv3">
+                        <rect key="frame" x="18" y="22" width="136" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <animations/>
+                        <buttonCell key="cell" type="check" title="Enable handyLock" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="wE4-B1-nBz">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="handleEnaDisableHandyLock:" target="494" id="Lxk-hO-bID"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" id="DGs-VA-DbR">
+                        <rect key="frame" x="447" y="13" width="148" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <animations/>
+                        <buttonCell key="cell" type="push" title="Check for Updates" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ptI-tM-jrq">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="checkForUpdates:" target="494" id="6Ta-7o-kq6"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" id="0Va-D3-hx3">
+                        <rect key="frame" x="279" y="13" width="85" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <animations/>
+                        <buttonCell key="cell" type="push" title="Donate" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Lqy-an-BQh">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="donate:" target="494" id="1lQ-cZ-aVh"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <animations/>
+            </view>
+            <point key="canvasLocation" x="418" y="323"/>
+        </window>
+        <userDefaultsController representsSharedInstance="YES" id="OjQ-uP-NFb"/>
+        <window title="Password" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="pHw-jO-MbC">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="213" y="227" width="288" height="125"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2048" height="1129"/>
+            <view key="contentView" id="2dO-l5-AJ6">
+                <rect key="frame" x="0.0" y="0.0" width="288" height="125"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <secureTextField verticalHuggingPriority="750" id="0r2-Mf-DpU">
+                        <rect key="frame" x="130" y="83" width="138" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <animations/>
+                        <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="po3-tB-mGj">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <allowedInputSourceLocales>
+                                <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                            </allowedInputSourceLocales>
+                        </secureTextFieldCell>
+                    </secureTextField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="F8n-3e-74s">
+                        <rect key="frame" x="19" y="85" width="105" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <animations/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Enter password:" id="TaA-Pk-hHw">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <secureTextField verticalHuggingPriority="750" id="Z5c-sf-Jql">
+                        <rect key="frame" x="130" y="55" width="138" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <animations/>
+                        <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="Hml-B3-c0i">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <allowedInputSourceLocales>
+                                <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                            </allowedInputSourceLocales>
+                        </secureTextFieldCell>
+                    </secureTextField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="UJR-eu-vdc">
+                        <rect key="frame" x="18" y="57" width="106" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <animations/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Verify password:" id="buz-oV-3D1">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" id="aOn-IR-MO6">
+                        <rect key="frame" x="14" y="13" width="126" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <animations/>
+                        <buttonCell key="cell" type="push" title="Set Password" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Eph-va-EcV">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="setPasswordButton:" target="494" id="9w1-ci-YF8"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" id="v8F-Sy-AC9">
+                        <rect key="frame" x="191" y="13" width="83" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <animations/>
+                        <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="JcI-RC-nQI">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="cancelSettingPassword:" target="494" id="15Z-AQ-QAs"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <animations/>
+            </view>
+            <point key="canvasLocation" x="428" y="-204.5"/>
+        </window>
+    </objects>
+    <resources>
+        <image name="AppIcon" width="512" height="512"/>
+    </resources>
+</document>

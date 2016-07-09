@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C6D634E5-88CF-40AD-BC1F-8365023B7FDC</string>
+	<key>IDESourceControlProjectName</key>
+	<string>handyLock</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9B43B0AB631C1EE0652A97B7EE4E1CC6FDCA9B87</key>
+		<string>https://bitbucket.org/bmaltais/handyproximity.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>handyLock.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9B43B0AB631C1EE0652A97B7EE4E1CC6FDCA9B87</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/bmaltais/handyproximity.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9B43B0AB631C1EE0652A97B7EE4E1CC6FDCA9B87</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9B43B0AB631C1EE0652A97B7EE4E1CC6FDCA9B87</string>
+			<key>IDESourceControlWCCName</key>
+			<string>handyLock</string>
+		</dict>
+	</array>
+</dict>
+</plist>
